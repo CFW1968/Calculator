@@ -43,8 +43,8 @@ class CalculatorTest {
     @ParameterizedTest
     @MethodSource("integerSubtractionInputParameters")
     void integerSubtraction(int minuend, int subtrahend, int expectedResult) {
-        int result = calculator.integerSubtraction(minuend, subtrahend);
-        assertEquals(expectedResult, result, minuend + "-" + subtrahend + " did not produce " + expectedResult);
+        int actualResult = calculator.integerSubtraction(minuend, subtrahend);
+        assertEquals(expectedResult, actualResult, minuend + "-" + subtrahend + " did not produce " + expectedResult);
     }
     public static Stream<Arguments> integerSubtractionInputParameters() {
         return Stream.of(
